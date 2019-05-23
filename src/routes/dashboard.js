@@ -1,5 +1,4 @@
 // @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
 import TimerView from '../components/Timer/TimerView'
 
 

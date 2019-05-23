@@ -51,7 +51,7 @@ class TimerItem extends Component {
     if(!checked){ //true면 실행 
       startTimer(timerObj)
     }else{ //false 면 stop
-
+      stopTimer(timerObj)
     }
 
   }

@@ -3,7 +3,6 @@ import style from './DashBoard.module.css'
 import { Switch, Route, Redirect } from "react-router-dom";
 import dashboardRoutes from "../../routes/dashboard.js";
 import SideBar from '../../components/SideBar';
-import CarouselSlide from '../../components/CarouselSlide'
 //import SideNav from '../../components/SideNav';
 
 
@@ -60,7 +59,6 @@ export default class DashBoard extends Component {
             <div className = {style.content} > 
                 <div className ={style.container} 
                      style ={ open ? openStyle : closeStyle}>
-                     <CarouselSlide/>
                     {switchRoutes}
                 </div>
             </div>

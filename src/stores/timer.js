@@ -81,6 +81,7 @@ export default class TimerStore{
     }
     @action
     startTimer = (timerObj) =>{
+        console.log("startTimer!")
         console.log(timerObj.name)
         this.socket.emit("startTimer",{
             name: timerObj.name,
@@ -98,10 +99,11 @@ export default class TimerStore{
     }
 
     @action 
-    stopTimer = (name, idx) => {
+    stopTimer = (timerObj) => {
+        console.log("stopTimer!")
         this.socket.emit("stopTimer",{
-            name: name,
-            room: "room"+idx,
+            name: timerObj.name,
+            room: timerObj.name+ "_"+ timerObj.number,
         })
         // 서버로부터의 메시지가 수신되면
         this.socket.on("stopTimer", (data)=> {
